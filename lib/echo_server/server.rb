@@ -2,7 +2,7 @@ require 'socket'
 module EchoServer
   # module Server?
   class Server
-    def initialize(host='127.0.0.1', port=8765)
+    def initialize(port=8765, host='127.0.0.1')
       @host = host
       @port = port
       @server = TCPServer.open(host, port)

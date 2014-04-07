@@ -8,15 +8,20 @@ OptionParser.new do |opts|
   opts.separator  ""
   opts.separator  "Options"
 
-  opts.on("-p","--port PORT","which port you want server run") do |port|
+  opts.on("-p","--port PORT","Which port you want server run") do |port|
     options[:port] = port
+  end
+
+  opts.on( '-h', '--help', 'Display this screen' ) do
+    puts opts
+    exit
   end
 
   opts.parse!
 end
 
-if opts[:port] = port
-  Server.new(port=port).start
+if port=options[:port]
+  EchoServer::Server.new(port).start
 else
-  Server.new.start
+  EchoServer::Server.new.start
 end

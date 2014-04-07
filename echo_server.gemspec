@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = EchoServer::VERSION
   spec.authors       = ["Dmitry Davydov"]
   spec.email         = ["haudvd@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Its is simple echo server, working at HTTP/1.0}
+  spec.description   = %q{Server start 'po umolchaniu' on host 127.0.0.1 and port 8765.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
