@@ -2,7 +2,6 @@ require 'echo_server/parser'
 require 'echo_server/http'
 require 'socket'
 module EchoServer
-  # module Server?
   class Server
     def initialize(port=8765, host='127.0.0.1')
       @host = host
@@ -19,7 +18,6 @@ module EchoServer
       start_message
       while connection = @server.accept
         Thread.new(connection) do |conn|
-          # port, host = conn.peeraddr[1,2]
           begin
             loop do
               line = conn.readline

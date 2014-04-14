@@ -18,10 +18,10 @@ To run the test
 
 By default server is running on port 8765
 
-    $ echo_server
+    $ server
 
 For use a custom port:
     
-    $ echo_server -p 8888
+    $ server -p 8888
 
 
