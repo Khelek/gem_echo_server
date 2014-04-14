@@ -1,3 +1,5 @@
+require 'echo_server/parser'
+require 'echo_server/http'
 require 'socket'
 module EchoServer
   # module Server?
@@ -21,8 +23,10 @@ module EchoServer
           begin
             loop do
               line = conn.readline
-              # add head parse
-              conn.puts line
+              param = EchoServer::Parser.parse_http_param(line, "query")
+              line = conn.readline
+              response = (param and line =~ /^[\r\n]+$/) ? EchoServer::Http.code_200(param) : EchoServer::Http.code_400
+              conn.puts response
               conn.close
             end
           rescue EOFError
