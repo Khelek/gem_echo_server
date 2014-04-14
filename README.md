@@ -1,6 +1,6 @@
 # EchoServer
 
-This is a simple echo server on ruby
+This is a simple http echo server on ruby that responds like "GET /?query=echo HTTP/1.0"
 
 ## Installation
 
