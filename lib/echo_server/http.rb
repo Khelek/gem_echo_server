@@ -8,7 +8,7 @@ module EchoServer
     end
 
     def self.code_400
-      "HTTP/1.0 400 Bad Request"
+      "HTTP/1.0 400 Bad Request\r\n"
     end
   end
 end
