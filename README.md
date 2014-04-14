@@ -1,29 +1,27 @@
 # EchoServer
 
-TODO: Write a gem description
+This is a simple echo server on ruby
 
 ## Installation
 
-Add this line to your application's Gemfile:
+    $ git clone https://github.com/Khelek/gem_echo_server.git
 
-    gem 'echo_server'
+    $ cd gem_echo_server
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install echo_server
+    $ bundle && rake install
+    
+To run the test
+    
+    $ rake test
 
 ## Usage
 
-TODO: Write usage instructions here
+By default server is running on port 8765
 
-## Contributing
+    $ echo_server
 
-1. Fork it ( http://github.com/<my-github-username>/echo_server/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+For use a custom port:
+    
+    $ echo_server -p 8888
+
+
